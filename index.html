@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Kullanıcı Kayıt Formu</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        
+    </head>
+    <body onload="koduret()">
+        <h1 id="baslik">Kayıt Formu</h1>
+    <!--Sayfamız yüklendiğinde koduret fonksiyonumuz çalışssın diye onload kullanırız. -->
+       <div  class="form1">
+            <form action="/action_page.php" method="post">
+                <table width="610" border="0">
+                    <tr>
+                        <td width="180" >Adı:</td>
+                        <td width="270" ><input name="" id="ad" type="text" value="Adınızı yazınız" onfocus="odaklan(this.id)"/></td>
+                        <td width="180" ><span id="aduyari"></span></td>
+                    </tr>
+                    <tr>
+                        <td width="180" >Soyadı:</td>
+                        <td width="270" ><input name="" id="soyad" type="text" value="Soyadınızı yazınız" onfocus="odaklan(this.id)/></td>
+                        <td width="180" ><span id="soyaduyari"></span></td>
+                    </tr>
+                    <tr>
+                        <td width="180" >Yaşınız:</td>
+                        <td width="270" ><input name="" id="yas" type="text" value="Yaşınızı yazınız" onfocus="odaklan(this.id)/></td>
+                        <td width="180" ><span id="yasuyari"></span></td>
+                    </tr>
+                    <tr>
+                        <td width="180" >Kullanıcı Adı:</td>
+                        <td width="270" ><input name="" id="kullanici_adi" type="text" value="Kullanıcı adınızı yazınız" onfocus="odaklan(this.id)/> </td>
+                        <td width="180" ><span id="kullaniciadiuyari"></span></td>
+                    </tr>
+                    <tr>
+                        <td width="180" >Şifre:</td>
+                        <td width="270" ><input name="" id="sifre1" type="password" value="Şifrenizi yazınız" onfocus="odaklan(this.id)/></td>
+                        <td width="180" ><span id="sifre1uyari"></span></td>
+                    </tr>
+                    <tr>
+                        <td width="180" >Şifre Tekrar:</td>
+                        <td width="270" ><input name="" id="sifre2" type="password" value="Şifrenizi tekrar yazınız" onfocus="odaklan(this.id)/></td>
+                        <td width="180" ><span id="sifre2uyari"></span></td>
+                    </tr>
+                    <tr>
+                        <td width="180" >E-Mail:</td>
+                        <td width="270" ><input name="" id="email" type="text" value="E-mailinizi giriniz" onfocus="odaklan(this.id)/></td>
+                        <td width="180" ><span id="mailuyari"></span></td>
+                    </tr>
+                    <tr>
+                        <td width="180" >Telefon:</td>
+                        <td width="270" ><input name="" id="tel" type="text" value="Telefon numaranızı giriniz" onfocus="odaklan(this.id)/></td>
+                        <td width="180" ><span id="teluyari"></span></td>
+                    </tr>
+                    <tr>
+                        <td width="180" >Doğum Tarihi:</td>
+
+                        <td width="270" >
+                        <select name="" id="gun" >
+
+                        <option value="">Gün</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        </select> 
+
+                        <select name="" id="ay">
+                        <option>Ay</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        </select>
+
+                        <select name="" id="yil">
+                        <option value="">Yıl</option>
+                        <option value="1997">1997</option>
+                        <option value="1998">1998</option>
+                        <option value="1999">1999</option>
+                        <option value="2000">2000</option>
+                        <option value="2001">2001</option>
+                        </select>
+                        </td>
+
+                        <td width="180" ><span id="dogumtarihiuyari"></span></td>
+                    </tr>
+                    <tr>
+                        <td width="180" >Doğum Yeri:</td>
+                        <td width="270" >
+                        <select name="" id="dogum_yeri">
+                        <option value="Malatya">Malatya</option>
+                        <option value="Istanbul">İstanbul</option>
+                        <option value="Ankara">Ankara</option>
+                        <option value="Elazıg">Elazıg</option>
+                        <option value="Sivas">Sivas</option>
+                        </select></td>
+                        <td width="180" ><span id="dogumyeriuyari"></span></td>
+                    </tr>
+                    <tr>
+                        <td width="180" >Cinsiyet:</td>
+                        <td width="270" ><input name="cinsiyet" id="cins1" type="radio" value="Erkek"/> Erkek <input name="cinsiyet" id="cins2" type="radio" checked="checked" value="Kadın"/> Kadın</td>
+                       <!--Burada inputlara aynı name'i verirsek seçim yaparken aynı anda ikisinin seçilmesini önler. 
+                       checked ile de varsayılan olarak işaretlenmiş radio button oluştururuz.-->
+
+                        <td width="180" ><span id="cinsiyetuyari"></span></td>
+                    </tr>
+                    <tr>
+                        <td width="180" >Bildiği Diller:</td>
+
+                        <td width="270" ><input name="" id="dil1" type="checkbox" value=""/> İngilizce <input name="" id="dil2" type="checkbox" value=""/>
+                         Almanca <input name="" id="dil3" type="checkbox" value=""/> Fransızca                       
+                         <td width="180" ><span id="diluyari"></span></td>
+                    </tr>
+                    <tr>
+                        <td width="180" >Favori Renginiz:</td>
+                        <td width="270" ><input type="color" id="renksec" name="renksec" value="#fff"></td>
+                        <td width="180" ><span id="renkuyari"></span></td>
+                    </tr>
+                    <tr>
+                        <td width="180" >Kısa Özgeçmişiniz:</td>
+                        <td width="270" ><textarea name="ozgecmis" id="gecmis"rows="10" cols="30"></textarea></td>
+                        <td width="180" ><span id="ozgecmisuyari"></span></td>
+                    </tr>
+                    <tr>
+                        <td width="180" ><input name="" id="uretilenkod" type="text" /></td>
+                        <td width="270" ><input name="" id="girilenkod" type="text" value="Güvenlik kodununu giriniz"/></td>
+                        <td width="180" ><span id="guvenlikuyari"></span></td>
+                    </tr>
+                    
+                    <tr>
+                        <td width="180" ></td>
+                        <td width="270" ><input name="button" id="button_submit" type="submit" value="Submit"/>  <input name="button" id="button_reset" type="submit" value="Reset"/></td                     >
+                        <td width="180" ></td>
+                    </tr>
+                    <tr>
+                        <td width="180" ></td>
+                        <td width="270" ><input name="button" id="button" type="submit" value="Gönder" onclick="islem()"/></td                     >
+                        <td width="180" ></td>
+                    </tr>
+                    
+                </table>
+
+            </form>
+
+       </div>
+    </body>
+</html>
